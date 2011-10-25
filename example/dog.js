@@ -1,22 +1,22 @@
-require('../test/common');
-function Dog() {}
-
+require("../test/common");
+function Dog() {
+  "use strict";
+}
 Dog.prototype.seeCat = function () {
-  this.bark('whuf, whuf');
-  this.run();
+	"use strict";
+	this.bark("whuf, whuf");
+	this.run();
 };
-
 Dog.prototype.bark = function (bark) {
-  require('sys').puts(bark);
+	"use strict";
+	require("sys").puts(bark);
 };
-
-var gently = new(require('gently'))()
-  , assert = require('assert')
-  , dog = new Dog();
-
-gently.expect(dog, 'bark', function (bark) {
-  assert.equal(bark, 'whuf, whuf');
+var gently = new (require("gently"))(),
+	dog = new Dog(),
+	assert = require("assert");
+gently.expect(dog, "bark", function (bark) {
+	"use strict";
+	assert.equal(bark, "whuf, whuf");
 });
-gently.expect(dog, 'run');
-
+gently.expect(dog, "run");
 dog.seeCat();
