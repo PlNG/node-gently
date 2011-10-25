@@ -1,1 +1,1 @@
-module.exports = require('./lib/gently');
+module.exports = require("./lib/gently");
